@@ -28,6 +28,22 @@
       "destination": "/tools.html"
     },
     {
+      "source": "/knowledge-bank",
+      "destination": "/knowledge-bank.html"
+    },
+    {
+      "source": "/service-detail",
+      "destination": "/service-detail.html"
+    },
+    {
+      "source": "/blog-detail",
+      "destination": "/blog-detail.html"
+    },
+    {
+      "source": "/tool-detail",
+      "destination": "/tool-detail.html"
+    },
+    {
       "source": "/contact",
       "destination": "/contact.html"
     }

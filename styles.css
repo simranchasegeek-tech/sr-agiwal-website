@@ -633,6 +633,168 @@ section {
   background: #fff;
 }
 
+.detail-hero {
+  padding: 96px 0;
+  color: #fff;
+  background:
+    linear-gradient(120deg, rgba(18, 38, 66, .95), rgba(11, 140, 140, .68)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.detail-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, .9fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.detail-hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+}
+
+.detail-hero p {
+  width: min(720px, 100%);
+  color: #e7eef6;
+  font-size: 18px;
+}
+
+.insight-panel,
+.tool-console {
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, .1);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.insight-panel > span,
+.tool-console > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #f4c979;
+  font-size: 13px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.step-row {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+}
+
+.step-row strong {
+  color: #f4c979;
+  font-size: 22px;
+}
+
+.step-row p,
+.tool-console p {
+  margin: 0;
+  color: #fff;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.detail-copy,
+.detail-aside,
+.article-body,
+.article-card,
+.tool-mini {
+  padding: 28px;
+}
+
+.detail-copy h2 {
+  margin: 8px 0 18px;
+  color: var(--navy);
+  font-size: clamp(26px, 4vw, 42px);
+}
+
+.detail-copy ul {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.detail-aside {
+  position: sticky;
+  top: 116px;
+}
+
+.detail-aside h3,
+.article-card h3,
+.tool-mini h3 {
+  color: var(--navy);
+}
+
+.detail-aside p,
+.article-card p,
+.tool-mini p,
+.article-body p {
+  color: var(--muted);
+}
+
+.article-card {
+  display: block;
+  min-height: 230px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.article-card:hover,
+.article-card:focus-visible {
+  border-color: rgba(11, 140, 140, .45);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.article-card span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.article-card h3 {
+  margin-top: 12px;
+  font-size: 22px;
+}
+
+.article-layout {
+  width: min(880px, calc(100% - 32px));
+}
+
+.article-body {
+  font-size: 18px;
+}
+
+.btn.secondary.dark {
+  border-color: var(--line);
+  color: var(--navy);
+}
+
+.tool-console p {
+  padding: 12px 0;
+  border-top: 1px solid rgba(255, 255, 255, .16);
+  font-weight: 800;
+}
+
+.tool-mini {
+  min-height: 180px;
+}
+
 .contact-grid {
   grid-template-columns: .85fr 1.15fr;
 }
@@ -690,6 +852,12 @@ textarea {
 
 form .full {
   grid-column: 1 / -1;
+}
+
+.form-status {
+  margin: 0;
+  color: var(--teal);
+  font-weight: 800;
 }
 
 .site-footer {
@@ -836,8 +1004,14 @@ form .full {
   .three,
   .about-layout,
   .contact-grid,
+  .detail-hero-grid,
+  .detail-layout,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .detail-aside {
+    position: static;
   }
 
   .links-grid {
@@ -882,6 +1056,10 @@ form .full {
 
   .page-hero {
     padding: 88px 0 52px;
+  }
+
+  .detail-hero {
+    padding: 78px 0;
   }
 
   .overview-card,
@@ -988,6 +1166,15 @@ form .full {
     padding: 66px 0 42px;
   }
 
+  .detail-hero {
+    padding: 58px 0;
+  }
+
+  .detail-hero p,
+  .article-body {
+    font-size: 16px;
+  }
+
   .breadcrumb {
     flex-wrap: wrap;
   }
@@ -1012,6 +1199,13 @@ form .full {
   .overview-card,
   .service-card,
   .service-detail,
+  .detail-copy,
+  .detail-aside,
+  .article-body,
+  .article-card,
+  .tool-mini,
+  .insight-panel,
+  .tool-console,
   .contact-item,
   .contact-form,
   .blog-content {
