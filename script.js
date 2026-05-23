@@ -27,3 +27,14 @@ if (toggle && nav) {
 document.querySelectorAll('a[href="#"]').forEach((link) => {
   link.addEventListener("click", (event) => event.preventDefault());
 });
+
+document.querySelectorAll(".contact-form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const status = form.querySelector(".form-status");
+    if (status) {
+      status.textContent = "Thanks. Your enquiry is ready for the team. Please call or WhatsApp us for urgent support.";
+    }
+    form.reset();
+  });
+});
