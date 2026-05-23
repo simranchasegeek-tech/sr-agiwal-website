@@ -2,16 +2,14 @@
   "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "builds": [
-    {
-      "src": "api/handler.js",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/api/handler.js"
+      "src": "/(.+)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/index.html"
     }
   ],
   "headers": [
