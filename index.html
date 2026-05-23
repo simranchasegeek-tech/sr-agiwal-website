@@ -75,23 +75,72 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container">
+    <section class="hero marketplace-hero">
+      <div class="container marketplace-hero-grid">
         <div class="hero-panel">
-          <p class="eyebrow">Overview</p>
-          <h1>Think fresh,<br>Work faster,<br>Grow smarter &amp;<br><span>Save money</span></h1>
-          <p class="hero-copy">S R Agiwal &amp; Associates are committed to invest in Ideas that value your time.</p>
+          <p class="eyebrow">Tax & Compliance Experts</p>
+          <h1>Book consultation with CA experts for tax, GST, audit and business growth</h1>
+          <p class="hero-copy">No geographical barriers to start, manage and grow your business with timely compliance and practical advisory.</p>
+          <div class="hero-search-card">
+            <label for="home-service-select">Select Service</label>
+            <div class="hero-search-row">
+              <select id="home-service-select" onchange="if(this.value) window.location.href=this.value">
+                <option value="">Choose a service</option>
+                <option value="service-detail.html?slug=gst-consultation">GST Consultation</option>
+                <option value="service-detail.html?slug=income-tax-consultation">Income Tax Consultation</option>
+                <option value="service-detail.html?slug=audits">Audits</option>
+                <option value="service-detail.html?slug=management-consultancy">Management Consultancy</option>
+                <option value="service-detail.html?slug=accounting-services">Accounting Services</option>
+                <option value="service-detail.html?slug=corporate-law-consultancy">Corporate Law Consultancy</option>
+                <option value="service-detail.html?slug=business-automation">Business Automation</option>
+                <option value="service-detail.html?slug=data-analytics">Data &amp; Analytics</option>
+              </select>
+              <a class="btn primary" href="service.html">Find Experts</a>
+            </div>
+          </div>
           <div class="actions">
-            <a class="btn primary" href="service.html">Find Out More</a>
-            <a class="btn secondary" href="contact.html">Contact Us</a>
+            <a class="btn primary" href="contact.html">Book Appointment</a>
+            <a class="btn secondary" href="service.html">Explore Services</a>
           </div>
         </div>
+        <form class="lead-form hero-lead-form card" action="https://agiwal.in/sendmail.php" method="post">
+          <span>For Expert Consultancy</span>
+          <h2>Get in Touch</h2>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <select name="service" required>
+            <option value="">Select your service</option>
+            <option>GST Consultation</option>
+            <option>Income Tax Consultation</option>
+            <option>Audits</option>
+            <option>Management Consultancy</option>
+            <option>Accounting Services</option>
+            <option>Corporate Law Consultancy</option>
+            <option>Business Automation</option>
+            <option>Data & Analytics</option>
+          </select>
+          <button class="btn primary" type="submit" name="submit">Get Started</button>
+        </form>
       </div>
       <div class="hero-strip">
         <div class="container">
           <div class="metric"><strong>Income Tax</strong>Consultation and compliance support</div>
           <div class="metric"><strong>GST</strong>Returns, audits, refunds and advisory</div>
           <div class="metric"><strong>Business Growth</strong>Automation, analytics and planning</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-directory">
+      <div class="container">
+        <div class="directory-grid">
+          <a href="service-detail.html?slug=income-tax-consultation"><strong>Tax Filing Expert</strong><span>ITR, TDS and assessment support</span></a>
+          <a href="service-detail.html?slug=gst-consultation"><strong>GST Registration &amp; Filing</strong><span>Returns, reconciliation and notices</span></a>
+          <a href="service-detail.html?slug=corporate-law-consultancy"><strong>Corporate Law</strong><span>Company, LLP and ROC compliance</span></a>
+          <a href="service-detail.html?slug=accounting-services"><strong>Book Keeping</strong><span>Accounts, records and reporting</span></a>
+          <a href="service-detail.html?slug=audits"><strong>Audit Services</strong><span>Tax, GST, internal and MIS audits</span></a>
+          <a href="service-detail.html?slug=data-analytics"><strong>Data Analytics</strong><span>Dashboards and decision support</span></a>
         </div>
       </div>
     </section>

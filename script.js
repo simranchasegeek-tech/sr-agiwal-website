@@ -1,5 +1,44 @@
 const toggle = document.querySelector(".nav-toggle");
 const nav = document.querySelector(".nav");
+const header = document.querySelector(".site-header");
+
+if (header && !document.querySelector(".top-contact-strip")) {
+  header.insertAdjacentHTML(
+    "beforebegin",
+    `<div class="top-contact-strip">
+      <div class="container top-contact-inner">
+        <div class="top-contact-links">
+          <a href="tel:+917737711604">Call: +91-77377 11604</a>
+          <a href="mailto:caanshulagiwal@gmail.com">caanshulagiwal@gmail.com</a>
+        </div>
+        <div class="top-contact-actions">
+          <a href="service.html">Find Services</a>
+          <a class="strip-cta" href="contact.html">Book Consultation</a>
+        </div>
+      </div>
+    </div>`
+  );
+}
+
+if (header && !document.querySelector(".update-ribbon")) {
+  header.insertAdjacentHTML(
+    "afterend",
+    `<div class="update-ribbon">
+      <div class="container update-ribbon-inner">
+        <strong>Latest Updates</strong>
+        <div class="update-track" aria-label="Tax and compliance updates">
+          <span>GST Returns</span>
+          <span>Income Tax Filing</span>
+          <span>Audit Support</span>
+          <span>Company Compliance</span>
+          <span>Business Automation</span>
+          <span>Data Analytics</span>
+          <span>Investment Planning</span>
+        </div>
+      </div>
+    </div>`
+  );
+}
 
 if (toggle && nav) {
   const closeNav = () => {
@@ -28,13 +67,3 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
   link.addEventListener("click", (event) => event.preventDefault());
 });
 
-document.querySelectorAll(".contact-form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const status = form.querySelector(".form-status");
-    if (status) {
-      status.textContent = "Thanks. Your enquiry is ready for the team. Please call or WhatsApp us for urgent support.";
-    }
-    form.reset();
-  });
-});

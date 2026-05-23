@@ -364,6 +364,10 @@ section {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -633,6 +637,173 @@ section {
   background: #fff;
 }
 
+.service-landing-hero {
+  padding: 54px 0 70px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 78% 12%, rgba(244, 201, 121, .26), transparent 260px),
+    linear-gradient(135deg, rgba(7, 25, 57, .96), rgba(0, 76, 151, .82)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.service-landing-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(330px, .75fr);
+  gap: 36px;
+  align-items: center;
+}
+
+.service-landing-copy .breadcrumb {
+  margin: 0 0 24px;
+  color: #d7edf0;
+}
+
+.service-landing-copy h1 {
+  max-width: 820px;
+  font-size: clamp(40px, 6vw, 72px);
+}
+
+.service-landing-copy p {
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: #e7eef6;
+  font-size: 18px;
+}
+
+.service-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.service-badges span {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, .24);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  font-weight: 800;
+  backdrop-filter: blur(12px);
+}
+
+.lead-form {
+  display: grid;
+  gap: 14px;
+  padding: 28px;
+  border: 0;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .22);
+}
+
+.lead-form > span {
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.lead-form h2 {
+  color: var(--navy);
+  font-size: 28px;
+}
+
+.service-shortcuts {
+  padding: 0;
+  background: #fff;
+}
+
+.service-shortcut-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  transform: translateY(-32px);
+}
+
+.service-shortcut-grid a {
+  min-height: 118px;
+  padding: 18px;
+  border: 1px solid rgba(220, 227, 238, .92);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 14px 34px rgba(18, 38, 66, .09);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.service-shortcut-grid a:hover {
+  border-color: rgba(11, 140, 140, .35);
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.service-shortcut-grid strong {
+  display: block;
+  color: var(--navy);
+  font-size: 17px;
+}
+
+.service-shortcut-grid span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.advantage-band {
+  background: linear-gradient(180deg, #ffffff, #f2f6fb);
+}
+
+.advantage-card {
+  padding: 26px;
+  min-height: 220px;
+}
+
+.advantage-card strong {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: var(--mist);
+  color: var(--teal);
+}
+
+.advantage-card h3 {
+  margin-top: 18px;
+  color: var(--navy);
+  font-size: 21px;
+}
+
+.advantage-card p {
+  color: var(--muted);
+}
+
+.help-cta {
+  padding: 64px 0;
+  color: #fff;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(140, 255, 140, .18), transparent 250px),
+    linear-gradient(135deg, #122642, #0b8c8c);
+}
+
+.help-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+}
+
+.help-cta h2 {
+  max-width: 820px;
+  font-size: clamp(28px, 4vw, 44px);
+}
+
+.help-cta .kicker {
+  color: #f4c979;
+}
+
 .detail-hero {
   padding: 96px 0;
   color: #fff;
@@ -835,6 +1006,7 @@ section {
 }
 
 input,
+select,
 textarea {
   width: 100%;
   border: 1px solid var(--line);
@@ -843,6 +1015,18 @@ textarea {
   color: var(--ink);
   font: inherit;
   background: #fff;
+}
+
+select {
+  appearance: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: rgba(11, 140, 140, .5);
+  box-shadow: 0 0 0 4px rgba(11, 140, 140, .10);
 }
 
 textarea {
@@ -1002,8 +1186,10 @@ form .full {
 
   .two,
   .three,
+  .four,
   .about-layout,
   .contact-grid,
+  .service-landing-grid,
   .detail-hero-grid,
   .detail-layout,
   .footer-grid {
@@ -1016,6 +1202,14 @@ form .full {
 
   .links-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-shortcut-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .help-cta-inner {
+    grid-template-columns: 1fr;
   }
 
   .clients {
@@ -1182,8 +1376,33 @@ form .full {
   .links-grid,
   .clients,
   .field-grid,
+  .service-shortcut-grid,
   .gallery-track {
     grid-template-columns: 1fr;
+  }
+
+  .service-landing-hero {
+    padding: 42px 0 54px;
+  }
+
+  .service-landing-copy h1 {
+    font-size: clamp(34px, 11vw, 48px);
+  }
+
+  .service-landing-copy p {
+    font-size: 16px;
+  }
+
+  .service-badges span {
+    padding: 8px 12px;
+  }
+
+  .lead-form {
+    padding: 20px;
+  }
+
+  .service-shortcut-grid {
+    transform: translateY(-22px);
   }
 
   .grid {
@@ -1307,5 +1526,950 @@ form .full {
   .contact-form,
   .blog-content {
     padding: 16px;
+  }
+}
+
+/* CAOnWeb-inspired service marketplace refresh */
+.top-contact-strip {
+  position: relative;
+  z-index: 22;
+  color: #eaf7fb;
+  background: linear-gradient(90deg, #06205a, #034a7c 54%, #058272);
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.top-contact-inner {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.top-contact-links,
+.top-contact-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.top-contact-strip a {
+  color: inherit;
+}
+
+.strip-cta {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 6px;
+  background: #f5b544;
+  color: #08214e !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .16);
+}
+
+.site-header {
+  box-shadow: 0 12px 28px rgba(10, 37, 64, .08);
+}
+
+.nav-wrap {
+  min-height: 82px;
+}
+
+.brand {
+  min-width: 214px;
+}
+
+.brand img {
+  width: 198px;
+  height: 62px;
+}
+
+.nav > li > a {
+  min-height: 38px;
+  color: #183054;
+  font-size: 13px;
+}
+
+.nav > li:last-child > a {
+  background: #f5b544;
+  color: #08214e;
+  box-shadow: 0 10px 22px rgba(245, 181, 68, .22);
+}
+
+.nav > li:last-child > a:hover,
+.nav > li:last-child > a.active {
+  background: #e7a737;
+  color: #08214e;
+}
+
+.dropdown-menu {
+  width: 310px;
+  border-top: 3px solid #058272;
+}
+
+body {
+  background:
+    linear-gradient(180deg, #f4f8fc 0, #ffffff 520px, #f7f9fc 100%);
+}
+
+section:nth-of-type(even):not(.hero):not(.service-landing-hero):not(.page-hero):not(.cta):not(.help-cta) {
+  background: #fff;
+}
+
+.hero {
+  min-height: 600px;
+  background:
+    linear-gradient(90deg, rgba(6, 32, 90, .94), rgba(3, 74, 124, .76) 55%, rgba(5, 130, 114, .42)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.hero .container {
+  min-height: 600px;
+}
+
+.hero-panel {
+  width: min(720px, 100%);
+  padding: 96px 0 96px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6.4vw, 74px);
+}
+
+.hero-copy {
+  max-width: 620px;
+}
+
+.hero-strip {
+  background: rgba(4, 24, 62, .9);
+}
+
+.metric {
+  padding: 14px 0;
+  border-left: 3px solid rgba(245, 181, 68, .85);
+  padding-left: 16px;
+}
+
+.page-hero {
+  padding: 96px 0 64px;
+  background:
+    radial-gradient(circle at 85% 12%, rgba(245, 181, 68, .25), transparent 250px),
+    linear-gradient(135deg, rgba(6, 32, 90, .96), rgba(5, 130, 114, .8)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.page-hero h1 {
+  max-width: 820px;
+  font-size: clamp(36px, 5.4vw, 66px);
+}
+
+.section-head h2 {
+  color: #08214e;
+  font-size: clamp(28px, 3.6vw, 44px);
+}
+
+.kicker,
+.lead-form > span {
+  color: #058272;
+}
+
+.eyebrow {
+  color: #dff8f4;
+}
+
+.card,
+.values li,
+.link-card {
+  border-color: rgba(199, 211, 226, .82);
+  border-radius: 8px;
+  box-shadow: 0 14px 36px rgba(8, 33, 78, .08);
+}
+
+.card:hover,
+.link-card:hover,
+.values li:hover {
+  box-shadow: 0 22px 52px rgba(8, 33, 78, .13);
+}
+
+.service-card,
+.service-detail,
+.link-card,
+.article-card,
+.tool-mini,
+.contact-item,
+.contact-form,
+.detail-copy,
+.detail-aside {
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.service-card:hover,
+.service-detail:hover,
+.link-card:hover,
+.article-card:hover,
+.tool-mini:hover,
+.contact-item:hover {
+  border-color: rgba(5, 130, 114, .36);
+  transform: translateY(-3px);
+}
+
+.service-card::before,
+.service-detail::before {
+  background: linear-gradient(90deg, #f5b544, #058272, #034a7c);
+}
+
+.service-card h3,
+.service-detail h3,
+.overview-card h3,
+.link-card,
+.contact-item h3,
+.article-card h3,
+.tool-mini h3,
+.detail-copy h2,
+.detail-aside h3 {
+  color: #08214e;
+}
+
+.btn {
+  border-radius: 8px;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #058272, #034a7c);
+  box-shadow: 0 12px 24px rgba(5, 130, 114, .18);
+}
+
+.btn.primary:hover {
+  background: linear-gradient(135deg, #046d61, #06366e);
+}
+
+.service-landing-hero {
+  padding: 68px 0 88px;
+  background:
+    radial-gradient(circle at 82% 10%, rgba(245, 181, 68, .32), transparent 260px),
+    linear-gradient(135deg, rgba(6, 32, 90, .97), rgba(3, 74, 124, .88) 58%, rgba(5, 130, 114, .78)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.lead-form {
+  border-top: 5px solid #f5b544;
+  border-radius: 8px;
+}
+
+.lead-form .btn {
+  width: 100%;
+}
+
+.service-shortcut-grid a,
+.advantage-card {
+  border-radius: 8px;
+}
+
+.service-shortcut-grid a {
+  border-top: 4px solid #058272;
+}
+
+.advantage-card strong {
+  border-radius: 8px;
+  background: #e9f7f4;
+}
+
+.contact-grid {
+  align-items: stretch;
+}
+
+.contact-list {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+.contact-form {
+  border-top: 5px solid #f5b544;
+}
+
+.footer-top {
+  background:
+    radial-gradient(circle at 10% 0, rgba(5, 130, 114, .18), transparent 320px),
+    #101b2d;
+}
+
+.site-footer h4 {
+  margin-bottom: 12px;
+}
+
+.site-footer li a:hover,
+.site-footer p a:hover {
+  color: #f5b544;
+}
+
+.social-links a {
+  border-radius: 8px;
+}
+
+@media (max-width: 980px) {
+  .top-contact-inner {
+    min-height: 48px;
+  }
+
+  .nav-wrap {
+    min-height: 72px;
+  }
+
+  .nav {
+    inset: 70px 14px auto;
+  }
+
+  .nav > li:last-child > a {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .top-contact-strip {
+    display: none;
+  }
+
+  .site-header {
+    top: 0;
+  }
+
+  .nav-wrap {
+    min-height: 66px;
+  }
+
+  .brand img {
+    width: 148px;
+    height: 46px;
+  }
+
+  .hero-panel {
+    padding: 56px 0 48px;
+  }
+
+  .page-hero,
+  .service-landing-hero {
+    padding: 50px 0 46px;
+  }
+
+  .metric {
+    padding: 10px 0 10px 14px;
+  }
+
+  .service-shortcut-grid a {
+    min-height: 96px;
+  }
+}
+
+.update-ribbon {
+  position: relative;
+  z-index: 18;
+  border-bottom: 1px solid rgba(199, 211, 226, .75);
+  background: #fff;
+  color: #183054;
+  box-shadow: 0 6px 18px rgba(8, 33, 78, .05);
+}
+
+.update-ribbon-inner {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow: hidden;
+}
+
+.update-ribbon strong {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 6px;
+  background: #e9f7f4;
+  color: #058272;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.update-track {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  min-width: max-content;
+  color: #51627d;
+  font-size: 13px;
+  font-weight: 700;
+  animation: update-marquee 28s linear infinite;
+}
+
+.update-track span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: #f5b544;
+}
+
+@keyframes update-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-45%);
+  }
+}
+
+.service-landing-grid,
+.contact-grid,
+.detail-layout {
+  position: relative;
+}
+
+.service-landing-grid::before,
+.contact-grid::before,
+.detail-layout::before {
+  content: "";
+  position: absolute;
+  inset: -18px auto auto -18px;
+  width: 72px;
+  height: 72px;
+  border-left: 4px solid rgba(245, 181, 68, .52);
+  border-top: 4px solid rgba(5, 130, 114, .52);
+  pointer-events: none;
+}
+
+.lead-aside {
+  border-top: 5px solid #f5b544;
+}
+
+.lead-aside > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #058272;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.lead-aside form {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.lead-aside .btn {
+  width: 100%;
+}
+
+.article-body {
+  border-top: 5px solid #058272;
+}
+
+.article-card {
+  border-top: 4px solid #f5b544;
+}
+
+.article-card p {
+  margin-bottom: 0;
+}
+
+.tool-console {
+  border-top: 5px solid #f5b544;
+}
+
+.tool-mini {
+  border-top: 4px solid #058272;
+}
+
+.values {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.values li {
+  position: relative;
+  padding-left: 52px;
+}
+
+.values li::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #f5b544, #058272);
+}
+
+.clients {
+  align-items: stretch;
+}
+
+.client-logo {
+  background: #fff;
+  filter: saturate(.95);
+}
+
+.link-card {
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 48px;
+  border-top: 4px solid #058272;
+  color: #08214e;
+}
+
+.link-card::after {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e9f7f4;
+}
+
+.contact-item {
+  position: relative;
+  overflow: hidden;
+  border-left: 5px solid #058272;
+}
+
+.contact-item:nth-child(2) {
+  border-left-color: #f5b544;
+}
+
+.contact-item:nth-child(3) {
+  border-left-color: #034a7c;
+}
+
+.contact-form input,
+.contact-form textarea,
+.lead-form input,
+.lead-form select,
+.lead-aside input {
+  background: #f8fbfd;
+}
+
+.site-footer {
+  border-top: 6px solid #f5b544;
+}
+
+.footer-grid > div:first-child {
+  padding-right: 18px;
+}
+
+.footer-grid h4::after,
+.footer-grid h3::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 3px;
+  margin-top: 10px;
+  border-radius: 999px;
+  background: #f5b544;
+}
+
+@media (max-width: 980px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+
+  .service-landing-grid::before,
+  .contact-grid::before,
+  .detail-layout::before {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .update-ribbon {
+    display: none;
+  }
+
+  .article-card,
+  .tool-mini,
+  .link-card {
+    min-height: 0;
+  }
+}
+
+.marketplace-hero {
+  min-height: 680px;
+  background:
+    radial-gradient(circle at 80% 18%, rgba(245, 181, 68, .28), transparent 260px),
+    linear-gradient(105deg, rgba(6, 32, 90, .97), rgba(3, 74, 124, .82) 55%, rgba(5, 130, 114, .56)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.marketplace-hero .container {
+  min-height: auto;
+}
+
+.marketplace-hero-grid {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(330px, .72fr);
+  gap: 38px;
+  align-items: center;
+  padding-bottom: 92px;
+}
+
+.marketplace-hero .hero-panel {
+  width: 100%;
+  padding: 70px 0 40px;
+}
+
+.marketplace-hero h1 {
+  max-width: 820px;
+  font-size: clamp(42px, 5.4vw, 72px);
+}
+
+.hero-search-card {
+  width: min(720px, 100%);
+  margin-top: 30px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .14);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, .18);
+  backdrop-filter: blur(14px);
+}
+
+.hero-search-card label {
+  display: block;
+  margin-bottom: 8px;
+  color: #f5d390;
+  font-size: 12px;
+  font-weight: 850;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.hero-search-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+}
+
+.hero-search-row select {
+  min-height: 50px;
+  border: 0;
+  background: #fff;
+  font-weight: 700;
+}
+
+.hero-search-row .btn {
+  min-height: 50px;
+  white-space: nowrap;
+}
+
+.hero-lead-form {
+  align-self: center;
+}
+
+.home-directory {
+  padding: 0;
+  background: #fff;
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  transform: translateY(-42px);
+}
+
+.directory-grid a {
+  min-height: 136px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 18px;
+  border: 1px solid rgba(199, 211, 226, .82);
+  border-top: 5px solid #058272;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 42px rgba(8, 33, 78, .1);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.directory-grid a:nth-child(2n) {
+  border-top-color: #f5b544;
+}
+
+.directory-grid a:hover {
+  border-color: rgba(5, 130, 114, .38);
+  box-shadow: 0 24px 60px rgba(8, 33, 78, .14);
+  transform: translateY(-4px);
+}
+
+.directory-grid strong {
+  color: #08214e;
+  font-size: 16px;
+  line-height: 1.24;
+}
+
+.directory-grid span {
+  margin-top: 9px;
+  color: #657085;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.overview-card {
+  border-top: 5px solid #058272;
+}
+
+.overview-card:nth-child(2) {
+  border-top-color: #f5b544;
+}
+
+.about-band .prose h2 {
+  color: #08214e;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.blogs .card {
+  border-top: 4px solid #f5b544;
+}
+
+.gallery-track img {
+  box-shadow: 0 14px 34px rgba(8, 33, 78, .12);
+}
+
+@media (max-width: 1100px) {
+  .directory-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .marketplace-hero-grid {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    padding: 48px 0 110px;
+  }
+
+  .marketplace-hero .hero-panel {
+    padding: 0;
+  }
+
+  .hero-lead-form {
+    width: min(620px, 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .marketplace-hero {
+    min-height: auto;
+  }
+
+  .marketplace-hero-grid {
+    padding: 42px 0 0;
+    gap: 24px;
+  }
+
+  .marketplace-hero h1 {
+    font-size: clamp(32px, 10vw, 44px);
+  }
+
+  .hero-search-row,
+  .directory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-row .btn {
+    width: 100%;
+  }
+
+  .directory-grid {
+    transform: translateY(0);
+    padding: 22px 0 0;
+  }
+
+  .directory-grid a {
+    min-height: 104px;
+  }
+
+  .home-directory {
+    padding-bottom: 28px;
+  }
+}
+
+.reference-service-hero {
+  padding: 0;
+  min-height: 490px;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, .58), rgba(0, 0, 0, .42)),
+    url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") center/cover;
+}
+
+.reference-service-grid {
+  min-height: 490px;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 52px;
+  align-items: center;
+}
+
+.reference-service-hero .breadcrumb {
+  margin: 0 0 32px;
+  color: #e9eef5;
+}
+
+.reference-service-hero .eyebrow,
+.reference-service-hero .service-landing-copy p {
+  display: none;
+}
+
+.reference-service-hero .service-landing-copy h1 {
+  max-width: 760px;
+  color: #fff;
+  font-size: clamp(34px, 4vw, 52px);
+  line-height: 1.35;
+  text-transform: capitalize;
+}
+
+.reference-service-hero .service-landing-copy h1::first-letter {
+  text-transform: uppercase;
+}
+
+.reference-service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 22px 46px;
+  margin-top: 34px;
+}
+
+.reference-service-list a {
+  position: relative;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 42px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, .35);
+}
+
+.reference-service-list a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:
+    linear-gradient(135deg, transparent 50%, #fff 0) 8px 12px / 9px 4px no-repeat,
+    linear-gradient(45deg, transparent 50%, #fff 0) 7px 8px / 5px 10px no-repeat,
+    rgba(255, 255, 255, .96);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, .22);
+}
+
+.reference-lead-form {
+  gap: 0;
+  padding: 28px 24px 30px;
+  border-radius: 0;
+  border-top: 0;
+  box-shadow: 0 18px 54px rgba(0, 0, 0, .28);
+}
+
+.reference-lead-form > span {
+  color: #00a651;
+  font-size: 24px;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.reference-lead-form > span::after {
+  content: " Expert Consultancy";
+  color: #f5b544;
+}
+
+.reference-lead-form h2 {
+  margin: 8px 0 18px;
+  color: #26364c;
+  font-size: 28px;
+  text-align: center;
+}
+
+.reference-lead-form input,
+.reference-lead-form select {
+  min-height: 52px;
+  border: 0;
+  border-bottom: 1px solid #c9d2df;
+  border-radius: 0;
+  padding: 12px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.reference-lead-form input:focus,
+.reference-lead-form select:focus {
+  border-bottom-color: #058272;
+  box-shadow: none;
+}
+
+.reference-lead-form .btn {
+  margin-top: 20px;
+  min-height: 48px;
+  border-radius: 0;
+}
+
+@media (max-width: 980px) {
+  .reference-service-grid {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 56px 0;
+  }
+
+  .reference-lead-form {
+    width: min(520px, 100%);
+  }
+}
+
+@media (max-width: 640px) {
+  .reference-service-grid {
+    padding: 42px 0;
+  }
+
+  .reference-service-hero .service-landing-copy h1 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .reference-service-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 24px;
+  }
+
+  .reference-service-list a {
+    min-height: 28px;
+    padding-left: 36px;
+    font-size: 15px;
+  }
+
+  .reference-service-list a::before {
+    width: 23px;
+    height: 23px;
+  }
+
+  .reference-lead-form {
+    padding: 22px 18px;
   }
 }

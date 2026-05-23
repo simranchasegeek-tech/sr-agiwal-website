@@ -23,17 +23,64 @@
     </div>
   </header>
   <main>
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow">Our Services</span>
-        <h1>Services</h1>
-        <p>Navigating Your Financial Journey with Our Expertise.</p>
-        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+    <section class="service-landing-hero reference-service-hero">
+      <div class="container service-landing-grid reference-service-grid">
+        <div class="service-landing-copy">
+          <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><span>Services</span></div>
+          <span class="eyebrow">Tax & Compliance Platform</span>
+          <h1>Talk to CA experts for GST, Income Tax, Audit and Business Advisory</h1>
+          <p>Navigating your financial journey with practical guidance, timely compliance, and data-backed advisory for growing businesses.</p>
+          <div class="reference-service-list">
+            <a href="#income-tax-consultation">Tax Filing</a>
+            <a href="#gst-consultation">GST Registration</a>
+            <a href="#corporate-law-consultancy">Corporate Law</a>
+            <a href="#accounting-services">Book keeping &amp; Outsourcing</a>
+            <a href="#business-automation">Business Automation</a>
+            <a href="#audits">Audit Services</a>
+            <a href="#management-consultancy">Business Consultancy</a>
+            <a href="#data-analytics">Data Analytics</a>
+          </div>
+        </div>
+        <form class="lead-form card reference-lead-form" action="https://agiwal.in/sendmail.php" method="post">
+          <span>For Expert Consultancy</span>
+          <h2>Get in Touch</h2>
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="city" placeholder="Your City Name">
+          <select name="service" required>
+            <option value="">Select your service</option>
+            <option>GST Consultation</option>
+            <option>Income Tax Consultation</option>
+            <option>Audits</option>
+            <option>Management Consultancy</option>
+            <option>Accounting Services</option>
+            <option>Corporate Law Consultancy</option>
+            <option>Business Automation</option>
+            <option>Data & Analytics</option>
+            <option>Investment & Financial Planning</option>
+          </select>
+          <button class="btn primary" type="submit" name="submit">Get Started</button>
+        </form>
       </div>
     </section>
+
+    <section class="service-shortcuts">
+      <div class="container">
+        <div class="service-shortcut-grid">
+          <a href="#gst-consultation"><strong>GST</strong><span>Returns, audits and advisory</span></a>
+          <a href="#income-tax-consultation"><strong>Tax Filing</strong><span>ITR, audits and TDS</span></a>
+          <a href="#corporate-law-consultancy"><strong>Company Law</strong><span>Formation and compliance</span></a>
+          <a href="#accounting-services"><strong>Book Keeping</strong><span>Accounting and reconciliations</span></a>
+          <a href="#business-automation"><strong>Automation</strong><span>Dashboards and workflows</span></a>
+          <a href="#data-analytics"><strong>Analytics</strong><span>Insight-ready business data</span></a>
+        </div>
+      </div>
+    </section>
+
     <section>
       <div class="container">
-        <div class="section-head"><div><span class="kicker">Services</span><h2>SERVICES WE PROVIDE</h2></div></div>
+        <div class="section-head"><div><span class="kicker">CA Services</span><h2>Services designed for faster, clearer compliance</h2></div><p>Each engagement is handled with a clear scope, practical documentation, and a focus on reducing avoidable compliance friction.</p></div>
         <div class="grid two">
           <a id="gst-consultation" class="card service-detail" href="service-detail.html?slug=gst-consultation">
             <h3>GST Consultation</h3>
@@ -76,6 +123,28 @@
             <p>Our team of financial advisors provide personalized investment and financial planning services that help you achieve your long-term financial goals. Our experts provide you the best options, either for finance or for investment after a complete analysis of your financial risks, existing leverage levels, financial background and the future plans.</p>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="advantage-band">
+      <div class="container">
+        <div class="section-head"><div><span class="kicker">Advantage</span><h2>Why businesses work with us</h2></div></div>
+        <div class="grid four advantage-grid">
+          <article class="card advantage-card"><strong>01</strong><h3>No hidden approach</h3><p>Clear scope, clear deliverables, and practical working notes for every engagement.</p></article>
+          <article class="card advantage-card"><strong>02</strong><h3>Fast support rhythm</h3><p>Responsive handling for filings, notices, reconciliations, and urgent compliance questions.</p></article>
+          <article class="card advantage-card"><strong>03</strong><h3>Professional expertise</h3><p>CA-led review across taxation, accounting, audit, company law, and advisory needs.</p></article>
+          <article class="card advantage-card"><strong>04</strong><h3>Digital-first delivery</h3><p>Automation, analytics, and clean data practices built into the service approach.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="help-cta">
+      <div class="container help-cta-inner">
+        <div>
+          <span class="kicker">Need Help?</span>
+          <h2>Get expert consultation for your next filing, notice, audit, or business decision.</h2>
+        </div>
+        <a class="btn primary" href="contact.html">Contact Us</a>
       </div>
     </section>
   </main>

@@ -241,10 +241,16 @@ function renderServiceDetail() {
           <h2>Built around practical execution, not just advice</h2>
           <ul>${item.points.map((point) => `<li>${point}</li>`).join("")}</ul>
         </article>
-        <aside class="card detail-aside">
-          <h3>Ready to start?</h3>
-          <p>Share your requirement and we will map the right compliance, advisory, or automation support.</p>
-          <a class="btn primary" href="contact.html">Contact Us</a>
+        <aside class="card detail-aside lead-aside">
+          <span>For Expert Consultancy</span>
+          <h3>Get in Touch</h3>
+          <form action="https://agiwal.in/sendmail.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="hidden" name="service" value="${item.title}">
+            <button class="btn primary" type="submit" name="submit">Get Started</button>
+          </form>
         </aside>
       </div>
     </section>
@@ -278,11 +284,22 @@ function renderBlogDetail() {
       </div>
     </section>
     <section>
-      <div class="container article-layout">
+      <div class="container detail-layout">
         <article class="card article-body">
           ${item.body.map((paragraph) => `<p>${paragraph}</p>`).join("")}
           <div class="actions"><a class="btn primary" href="contact.html">Ask an Expert</a><a class="btn secondary dark" href="knowledge-bank.html">More Articles</a></div>
         </article>
+        <aside class="card detail-aside lead-aside">
+          <span>Get in Touch</span>
+          <h3>Need help with this?</h3>
+          <form action="https://agiwal.in/sendmail.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="hidden" name="subject" value="${item.title}">
+            <button class="btn primary" type="submit" name="submit">Talk to Expert</button>
+          </form>
+        </aside>
       </div>
     </section>
   `;
@@ -309,8 +326,20 @@ function renderToolDetail() {
       </div>
     </section>
     <section>
-      <div class="container grid three">
-        ${item.cards.map((card) => `<article class="card tool-mini"><h3>${card}</h3><p>Use this checkpoint before finalizing the working, filing, or advisory note.</p></article>`).join("")}
+      <div class="container detail-layout">
+        <div class="grid two">
+          ${item.cards.map((card) => `<article class="card tool-mini"><h3>${card}</h3><p>Use this checkpoint before finalizing the working, filing, or advisory note.</p></article>`).join("")}
+        </div>
+        <aside class="card detail-aside lead-aside">
+          <span>Need Assistance?</span>
+          <h3>Ask for a working review</h3>
+          <form action="https://agiwal.in/sendmail.php" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="hidden" name="subject" value="${item.title}">
+            <button class="btn primary" type="submit" name="submit">Get Assistance</button>
+          </form>
+        </aside>
       </div>
     </section>
   `;
