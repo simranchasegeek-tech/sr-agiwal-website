@@ -19,6 +19,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -33,6 +35,15 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: anywhere;
 }
 
 img {
@@ -168,6 +179,7 @@ img {
 
 .dropdown-menu a {
   display: block;
+  min-height: 40px;
   padding: 9px 10px;
   border-radius: 6px;
   color: #324057;
@@ -644,6 +656,12 @@ section {
   color: var(--muted);
 }
 
+.contact-item a,
+.site-footer p,
+.site-footer a {
+  overflow-wrap: anywhere;
+}
+
 .contact-form {
   padding: 28px;
 }
@@ -773,6 +791,7 @@ form .full {
     display: none;
     flex-direction: column;
     align-items: stretch;
+    gap: 2px;
     max-height: calc(100vh - 92px);
     overflow-y: auto;
     padding: 14px;
@@ -790,6 +809,7 @@ form .full {
     width: 100%;
     justify-content: space-between;
     min-height: 46px;
+    padding: 0 14px;
   }
 
   .dropdown-menu {
@@ -805,6 +825,11 @@ form .full {
     visibility: visible;
     transform: none;
     display: block;
+  }
+
+  .dropdown-menu a {
+    min-height: 42px;
+    padding: 10px 12px;
   }
 
   .two,
@@ -862,6 +887,7 @@ form .full {
   .overview-card,
   .service-card,
   .service-detail,
+  .contact-item,
   .contact-form {
     padding: 24px;
   }
@@ -896,6 +922,7 @@ form .full {
   .nav {
     inset: 66px 12px auto;
     max-height: calc(100vh - 80px);
+    padding: 10px;
   }
 
   .hero,
@@ -904,7 +931,9 @@ form .full {
   }
 
   .hero {
-    background-position: 58% center;
+    background:
+      linear-gradient(90deg, rgba(18, 38, 66, .92), rgba(18, 38, 66, .7)),
+      url("https://agiwal.in/Admin/assets/images/slider/4aXx7Wsrl3.jpg") 58% center/cover;
   }
 
   .hero-panel {
@@ -970,6 +999,10 @@ form .full {
     grid-template-columns: 1fr;
   }
 
+  .grid {
+    gap: 16px;
+  }
+
   .image-note {
     position: static;
     width: 100%;
@@ -1006,6 +1039,23 @@ form .full {
   .link-card {
     min-height: 68px;
     padding: 16px;
+  }
+
+  input,
+  textarea {
+    min-height: 46px;
+    padding: 12px;
+  }
+
+  textarea {
+    min-height: 132px;
+  }
+
+  .social-links a,
+  .whatsapp-float,
+  .back-top {
+    width: 42px;
+    height: 42px;
   }
 
   .cta {
@@ -1046,5 +1096,22 @@ form .full {
   .section-head h2,
   .page-hero h1 {
     font-size: 25px;
+  }
+
+  .hero-panel {
+    padding: 54px 0 44px;
+  }
+
+  .eyebrow {
+    font-size: 12px;
+  }
+
+  .overview-card,
+  .service-card,
+  .service-detail,
+  .contact-item,
+  .contact-form,
+  .blog-content {
+    padding: 16px;
   }
 }
