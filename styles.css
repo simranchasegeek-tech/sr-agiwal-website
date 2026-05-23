@@ -27,6 +27,7 @@ body {
   font-family: Inter, "Segoe UI", Arial, sans-serif;
   background: var(--soft);
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 a {
@@ -98,7 +99,17 @@ img {
   border-radius: var(--radius);
   background: var(--paper);
   color: var(--navy);
-  font-size: 24px;
+  font-size: 0;
+}
+
+.nav-toggle::before {
+  content: "";
+  width: 18px;
+  height: 14px;
+  background:
+    linear-gradient(var(--navy), var(--navy)) 0 0 / 100% 2px no-repeat,
+    linear-gradient(var(--navy), var(--navy)) 0 6px / 100% 2px no-repeat,
+    linear-gradient(var(--navy), var(--navy)) 0 12px / 100% 2px no-repeat;
 }
 
 .nav {
@@ -734,6 +745,23 @@ form .full {
 }
 
 @media (max-width: 980px) {
+  .container {
+    width: min(100% - 28px, 720px);
+  }
+
+  .nav-wrap {
+    min-height: 76px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand img {
+    width: 176px;
+    height: 54px;
+  }
+
   .nav-toggle {
     display: inline-grid;
     place-items: center;
@@ -741,10 +769,12 @@ form .full {
 
   .nav {
     position: absolute;
-    inset: 78px 16px auto;
+    inset: 74px 14px auto;
     display: none;
     flex-direction: column;
     align-items: stretch;
+    max-height: calc(100vh - 92px);
+    overflow-y: auto;
     padding: 14px;
     border: 1px solid var(--line);
     border-radius: var(--radius);
@@ -758,20 +788,22 @@ form .full {
 
   .nav > li > a {
     width: 100%;
+    justify-content: space-between;
+    min-height: 46px;
   }
 
   .dropdown-menu {
     position: static;
     width: 100%;
+    margin-top: 4px;
+    padding: 6px;
+    border: 0;
+    border-left: 2px solid var(--mist);
+    border-radius: 0;
     box-shadow: none;
     opacity: 1;
     visibility: visible;
     transform: none;
-    display: none;
-  }
-
-  .nav > li:hover .dropdown-menu,
-  .nav > li:focus-within .dropdown-menu {
     display: block;
   }
 
@@ -791,23 +823,112 @@ form .full {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .hero-strip .container,
+  .hero-strip .container {
+    grid-template-columns: 1fr;
+  }
+
   .cta-inner,
   .section-head {
+    display: grid;
     grid-template-columns: 1fr;
     align-items: start;
+  }
+
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero .container {
+    min-height: 560px;
+  }
+
+  .hero-panel {
+    padding: 82px 0 128px;
+  }
+
+  .hero-strip .container {
+    min-height: auto;
+    padding: 18px 0;
+  }
+
+  section {
+    padding: 68px 0;
+  }
+
+  .page-hero {
+    padding: 88px 0 52px;
+  }
+
+  .overview-card,
+  .service-card,
+  .service-detail,
+  .contact-form {
+    padding: 24px;
   }
 }
 
 @media (max-width: 640px) {
-  .brand strong,
-  .brand span {
-    display: none;
+  body {
+    font-size: 15px;
+    line-height: 1.58;
+  }
+
+  .container {
+    width: min(100% - 24px, 520px);
+  }
+
+  .nav-wrap {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 142px;
+    height: 44px;
+  }
+
+  .nav-toggle {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 auto;
+  }
+
+  .nav {
+    inset: 66px 12px auto;
+    max-height: calc(100vh - 80px);
   }
 
   .hero,
   .hero .container {
-    min-height: 600px;
+    min-height: auto;
+  }
+
+  .hero {
+    background-position: 58% center;
+  }
+
+  .hero-panel {
+    padding: 68px 0 56px;
+  }
+
+  h1 {
+    font-size: clamp(36px, 12vw, 48px);
+  }
+
+  .hero-copy,
+  .page-hero p {
+    font-size: 16px;
+  }
+
+  .actions {
+    gap: 10px;
+    margin-top: 24px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 46px;
+    padding: 0 14px;
   }
 
   .hero-strip {
@@ -821,7 +942,25 @@ form .full {
   }
 
   section {
-    padding: 58px 0;
+    padding: 48px 0;
+  }
+
+  .section-head {
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .section-head h2,
+  .page-hero h1 {
+    font-size: clamp(26px, 9vw, 34px);
+  }
+
+  .page-hero {
+    padding: 66px 0 42px;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
   }
 
   .links-grid,
@@ -835,5 +974,77 @@ form .full {
     position: static;
     width: 100%;
     margin-top: 14px;
+  }
+
+  .overview-card,
+  .service-card,
+  .service-detail,
+  .contact-item,
+  .contact-form,
+  .blog-content {
+    padding: 20px;
+  }
+
+  .overview-card h3,
+  .service-detail h3 {
+    font-size: 21px;
+  }
+
+  .service-card {
+    min-height: 0;
+  }
+
+  .service-card h3,
+  .blog-content h3 {
+    font-size: 18px;
+  }
+
+  .client-logo {
+    min-height: 82px;
+  }
+
+  .link-card {
+    min-height: 68px;
+    padding: 16px;
+  }
+
+  .cta {
+    padding: 44px 0;
+  }
+
+  .footer-top {
+    padding: 44px 0 30px;
+  }
+
+  .footer-grid {
+    gap: 26px;
+  }
+
+  .copyright {
+    font-size: 12px;
+  }
+
+  .whatsapp-float {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 380px) {
+  .container {
+    width: min(100% - 20px, 340px);
+  }
+
+  .brand img {
+    width: 128px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  .section-head h2,
+  .page-hero h1 {
+    font-size: 25px;
   }
 }
