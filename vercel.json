@@ -4,6 +4,21 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
+  "functions": {
+    "api/handler.js": {
+      "includeFiles": [
+        "index.html",
+        "about.html",
+        "service.html",
+        "important-links.html",
+        "tools.html",
+        "contact.html",
+        "404.html",
+        "styles.css",
+        "script.js"
+      ]
+    }
+  },
   "rewrites": [
     {
       "source": "/",
